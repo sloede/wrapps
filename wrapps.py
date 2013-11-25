@@ -5,6 +5,7 @@ import subprocess
 import sys
 
 class Wrapps:
+    # Set default executables
     ssh_exe = 'ssh'
     scp_exe = 'scp'
 
@@ -34,6 +35,12 @@ class Wrapps:
 
     def set_remote_dir(self, remote_dir):
         self._remote_dir = remote_dir
+
+    def set_ssh_exe(self, exe):
+        self.ssh_exe = exe
+
+    def set_scp_exe(self, exe):
+        self.scp_exe = exe
 
     def execute(self, cmd, remote_dir=None):
         # Build ssh command
